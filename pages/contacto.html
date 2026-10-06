@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+<link rel="stylesheet" href="/css/styles.css">
+
+    <title>Imp@rTodo**Home</title>
+</head>
+
+<body><!--Aca empieza el Body-->
+
+                              <!--Aca comienza el HEADER -->
+
+    <header>
+      <div  class="header-contenido">
+
+        <a href="/index.html"><img src="/imagenes/LOGO IMPORTODO.png" alt="Logo Importodo color" class="logo"></a>
+
+        <div class="importodo_box">
+
+        <p><h1  id="importodo">Import@do</h1></p>
+        </div>
+        <a href="/pages/contacto.html"><img src="/imagenes/carrito.png" alt="imagen del carrito" class="carrito"></a>
+                     
+      </div>
+
+      <div class="busca">
+       <input type="text" id="buscar producto" placeholder="Buscar productos..." onkeypress="detectarEnter(event)">
+       <p><h2>Envío Gratis</h2></p>
+      </div>
+
+       <nav>
+       <ul>
+        <li> <a href="/index.html">inicio</a></li>
+        <li> <a href="/pages/bazar.html">bazar</a></li>
+        <li> <a href="/pages/tech.html">tech</a></li>
+        <li> <a href="/pages/herramientas.html">herramientas</a></li>
+        <li> <a href="/pages/jardin.html">jardin</a></li>
+        <li> <a href="/pages/cuidadopersonal.html"> cuidado Personal</a></li>
+        <li> <a href="/pages/contacto.html">contacto</a></li>
+       </ul>
+       </nav>
+    </header>      
+
+    <main class="formain">
+
+
+    <form action="./contacto.html" method="post" autocomplete="off">
+
+        <fieldset>
+        <legend>información de contacto</legend>
+        <label for="nombre">nombre</label>
+        <input type="text" name="nombre" id="nombre">
+        <label for="apellido">apellido</label>
+        <input type="text" name="apellido" id="apellido">  <br><br>               
+        <label for="mensaje">mensaje:</label>
+        <input class="mensaje" type="text" name="mensaje" id="mensaje" placeholder="escriba en este campo...">
+        <br><br>
+        </fieldset>
+
+    </form>
+    </main>
+
+</body>
+
+<footer class="footer-contacto">
+
+  <div class="mail">
+      <p>Encontranos en redes sociales<p>
+        <a href="mailto:gelmi22@yahoo.com.ar">Contacto por e-mail</a>
+          </div>
+
+    <div class="redes-sociales">    
+
+      <a href="https://www.facebook.com/profile.php?id=61595174871095" target="_blank" rel="noopener noreferrer" class="red-link facebook">facebook</a>
+      <a href="https://www.instagram.com/toursxbaires/" target="_blank" class="red-link instagram">instagram</a>
+      <a href="https://www.behance.net/Gelmientiras" target="_blank" class="red-link behance">behance</a>
+          </div>
+
+    </footer>
+
+</html>
