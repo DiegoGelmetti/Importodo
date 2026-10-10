@@ -7,7 +7,10 @@
 }
 
 body {
-    width: 100%;   
+    width: 100%; 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;      
     color: rgb(63, 2, 2);    
     background-image: radial-gradient(circle, #470764, #000000);
 
@@ -71,9 +74,10 @@ input {
 main {
     width:100%;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap;    
+    justify-content:space-between;
     padding: 3em;
-    justify-content:space-between
+    flex: 1;
 }
 
 .formain {
@@ -83,7 +87,7 @@ main {
     background-color: #648ffd;
 }
 
-.videos {
+/* .videos {
   display: flex;
   flex-direction: row;      
   flex-wrap: nowrap;        
@@ -94,6 +98,24 @@ main {
   gap: 2.5rem; 
   margin-top: 1rem; 
 
+} */
+ .videos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.videos video {
+    display: block;
+    width: calc(25% - 1rem);
+    height: auto;
+    min-width: 0;
 }
 
 h3 {
@@ -401,3 +423,216 @@ footer a {
     color: rgb(255, 214, 10);
 }
 
+
+img.carrito {
+    width: 30px;
+    height: auto;
+    display: block;
+    filter: brightness(0) invert(1);
+}
+
+/* =====================================
+   DISEÑO RESPONSIVO - IMPORT@DO
+   Celulares y tablets
+===================================== */
+
+@media (max-width: 768px) {
+
+    .header-contenido {
+        width: 100%;
+        padding: 1rem;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .logo {
+        width: 90px;
+        height: auto;
+    }
+
+    #importodo {
+        font-size: clamp(2rem, 7vw, 3.5rem);
+        margin: 0.5rem;
+    }
+
+    .importodo_box {
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .busca {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    input {
+        width: min(90%, 20rem);
+        margin: 0.75rem auto;
+    }
+
+    .carrito {
+        width: 30px;
+        height: auto;
+    }
+
+    nav ul {
+        gap: 0.4rem;
+        margin: 0.5rem;
+    }
+
+    nav li {
+        padding: 0.5rem 0.7rem;
+    }
+
+    main {
+        width: 100%;
+        padding: 1rem;
+    }
+}
+
+
+/* =================================
+   IMPORT@DO - CELULARES
+================================= */
+
+@media (max-width: 480px) {
+
+    /* ENCABEZADO */
+    .header-contenido {
+        width: 100%;
+        max-width: 100%;
+        padding: 1rem;
+        gap: 0.75rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        width: 70px;
+        height: auto;
+    }
+
+    #importodo {
+        font-size: clamp(1.8rem, 7vw, 2.5rem);
+        margin: 0.25rem;
+    }
+
+    .importodo_box {
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .busca {
+        width: 100%;
+        max-width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    input {
+        width: 90%;
+        max-width: 20rem;
+        margin: 0.5rem auto;
+    }
+
+    .carrito {
+        width: 30px;
+        height: auto;
+    }
+
+    /* MENÚ */
+    nav ul {
+        justify-content: center;
+        gap: 0.35rem;
+        margin: 0.5rem;
+    }
+
+    nav li {
+        padding: 0.4rem 0.55rem;
+    }
+   
+    
+/* PRODUCTOS EN CELULARES */
+.contenedor1productos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    width: 100%;
+    max-width: 100%;
+    padding: 0.5rem;
+    margin: 0;
+}
+
+.contenedor1productos > div {
+    min-width: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.contenedor1productos img {
+    display: block;
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.contenedor1productos p {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    font-size: 0.85rem;
+}
+
+
+    /* VIDEOS */
+    .videos {
+        width: 100%;
+        height: auto;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        padding: 0.5rem;
+    }
+
+    .videos .video {
+        width: calc(50% - 0.5rem);
+        max-width: 100%;
+        min-width: 0;
+        margin: 0;
+    }
+
+    main {
+        width: 100%;
+        padding: 0.75rem;
+    }
+
+    .formain {
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+    }
+
+    
+      /* VIDEOS EN CELULARES */
+    .videos {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.75rem;
+        width: 100%;
+        height: auto;
+        padding: 0.5rem;
+    }
+
+    .videos video {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin: 0;
+        display: block;
+    }
+
+}
